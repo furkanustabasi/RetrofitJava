@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.furkanustabasi.retrofitjava.R;
 import com.furkanustabasi.retrofitjava.adapter.RecyclerViewAdapter;
@@ -65,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
         compositeDisposable.add(cryptoAPI.getData()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(this::handleResponse));
+                .subscribe(this::handleResponse,
+                        throwable -> Log.e("hebele", "Throwable " + throwable.getMessage())));
 
 
         /*

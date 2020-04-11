@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RowHolder> {
 
     private ArrayList<CryptoModel> cryptoList;
-    private String[] colors = {"#a3ff0", "#ff00aa", "#b4a7d6", "#a4c2f4", "#8ee5ee", "#cd950c", "#f47932"};
+    private String[] colors = {"#a3ff00", "#ff00aa", "#b4a7d6", "#a4c2f4", "#8ee5ee", "#cd950c", "#f47932"};
 
     public RecyclerViewAdapter(ArrayList<CryptoModel> cryptoList) {
         this.cryptoList = cryptoList;
